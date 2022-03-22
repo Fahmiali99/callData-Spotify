@@ -7,12 +7,12 @@ function Home() {
   console.log(api_url.images[0]);
 
   return (
-    <div className="  ">
+    <div className="callDataPage ">
       <div className="w-100 d-flex justify-content-center mt-5 mb-5">
-        <div className="row card col-11 ">
+        <div className="row card col-11 mainCall">
           <div className="col mt-5 mb-3">
             <div className="container ">
-              <div className="w-100 d-flex justify-content-center ">
+              <div className="w-100 d-flex justify-content-center gam ">
                 <img
                   className=" rounded-circle gambar"
                   src={api_url.images[0].url}

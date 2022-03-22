@@ -7,29 +7,15 @@ body {
   background: linear-gradient(#e66465, #9198e5);
 }
 
-.subTitle {
-  width: 50%;
+.mainCall {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.gambar {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 @media screen and (max-width: 768px) {
-  .Data {
-    width: 100% !important;
-    height: 100vh;
-  }
-  .callData {
-    width: 100% !important;
-    height: 100%;
-  }
-
-  .lebar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .subTitle {
-    width: 100%;
-  }
   .gambar {
     width: 100%;
   }
