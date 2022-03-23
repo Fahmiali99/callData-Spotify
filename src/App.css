@@ -4,8 +4,23 @@
 }
 
 body {
-  background: linear-gradient(#e66465, #9198e5);
+  background: #9198e5;
 }
+
+/* .callDataPage {
+  background: linear-gradient(#e66465, #9198e5);
+} */
+
+#btnDisplay {
+  display: block;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+/* #Show {
+  display: none;
+} */
 
 .mainCall {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
