@@ -1,10 +1,12 @@
 import React from "react";
-import data from "../data";
+import data from "../Data/data";
 
 function MyComponentFunc() {
-  const api_url = data.album;
-  console.log(api_url.images[0]);
-  console.log(api_url.artists[0].name);
+  const api_url = data[1].album;
+  // console.log(api_url.images[0]);
+  // // console.log(api_url.artists[0].name);
+  // console.log(api_url);
+
   return (
     <div>
       <div className="w-100 d-flex justify-content-center mt-5 mb-5 ">

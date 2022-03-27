@@ -1,6 +1,5 @@
 import React from "react";
-
-import { MyComponentFunc } from "./Main/MyComponents";
+import { MyComponentFunc } from "./Page/MyComponentFunc";
 
 function Home() {
   // var btnShow = document.getElementById("btnDisplay");

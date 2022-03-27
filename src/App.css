@@ -5,6 +5,11 @@
 
 body {
   background: #9198e5;
+  font-family: "Mulish", sans-serif;
+}
+
+.color-album {
+  background-color: #c5caff;
 }
 
 /* .callDataPage {
