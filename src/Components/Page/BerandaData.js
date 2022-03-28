@@ -20,6 +20,7 @@ function BerandaData() {
           <div className="w-100 d-flex justify-content-center col-md-11 align-items-center">
             <FileData
               url={dataItem.album.images[0].url}
+              title={dataItem.album.name}
               name={dataItem.album.artists[0].name}
               durasi={dataItem.duration_ms}
             />
