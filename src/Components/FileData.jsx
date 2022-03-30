@@ -3,7 +3,7 @@ import React from "react";
 const FileData = ({ id, url, name, uri, title }) => {
   console.log(id);
   return (
-    <div className="w-100 d-flex justify-content-center mt-md-4 mb-md-4 mt-2 mb-2 ">
+    <div className="w-100 d-flex justify-content-center mt-md-4 mb-md-4 mt-2 mb-2">
       <div className=" card col-md-4  mainCall Show  " id="Show">
         <div className="col mt-5 ">
           <div className="container d-flex justify-content-center text-center">
