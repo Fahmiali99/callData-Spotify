@@ -10,9 +10,11 @@ function BerandaData() {
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
+  const [selectedTracksUri, setSelectedTracksUri] = useState([]);
+
   const [access_token, set_access_token] = useState(null);
   const [query, set_query] = useState("");
-  const [tracks, set_tracks] = useState([]);
+  const [tracks, setTracks] = useState([]);
 
   const Form = () => {
     return (
@@ -52,7 +54,7 @@ function BerandaData() {
           },
         })
         .then((res) => {
-          set_tracks(res.data.tracks.items);
+          setTracks(res.data.tracks.items);
         });
     } catch (err) {
       console.error(err);
@@ -103,6 +105,29 @@ function BerandaData() {
     set_access_token(token);
   });
 
+  const filterSelectedTracks = () => {
+    return tracks.filter((track) => selectedTracksUri.includes(track.url));
+  };
+
+  const onSuccessSearch = (searchTracks) => {
+    const selectedTracks = filterSelectedTracks();
+    const searchDistincTracks = searchTracks.filter(
+      (track) => !selectedTracksUri.includes(track.url)
+    );
+
+    setTracks([...selectedTracks, ...searchDistincTracks]);
+  };
+
+  const toggleSelect = (track) => {
+    const url = track.url;
+
+    if (selectedTracksUri.includes(url)) {
+      setSelectedTracksUri(selectedTracksUri.filter((item) => item !== url));
+    } else {
+      setSelectedTracksUri([...selectedTracksUri, url]);
+    }
+  };
+
   return (
     <div className="color-album">
       <div className="w-100 d-flex justify-content-center">
@@ -130,16 +155,19 @@ function BerandaData() {
       </div>
 
       {access_token && <Form />}
+
       <div className=" row-cols-md-3 container-fluid pb-5">
         <div className="w-100  justify-content-center col-md-11 align-items-center">
           {tracks.map((dataItem) => (
             <div key={data.id}>
               {/* <Track */}
               <FileData
+                onSuccess={(tracks) => onSuccessSearch(tracks)}
                 url={dataItem.album.images[0].url}
                 title={dataItem.album.name}
                 name={dataItem.album.artists[0].name}
                 durasi={dataItem.duration_ms}
+                toggleSelect={() => toggleSelect(dataItem)}
               />
             </div>
           ))}

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-const FileData = ({ id, url, name, uri, title }) => {
-  console.log(id);
+const FileData = ({ id, url, name, uri, title, toggleSelect }) => {
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleToggleSelect = () => {
+    setIsSelected(!isSelected);
+    toggleSelect();
+  };
+
   return (
     <div className="w-100 d-flex justify-content-center mt-md-4 mb-md-4 mt-2 mb-2">
       <div className=" card col-md-4  mainCall Show  " id="Show">
@@ -18,11 +24,13 @@ const FileData = ({ id, url, name, uri, title }) => {
                   <b>{name}</b>
                 </h5>
 
-                <a href={uri}>
-                  <button className="btn btn-success    mt-3 shadow p-2 col-12 col-sm-2 ">
-                    Select
-                  </button>
-                </a>
+                <button
+                  className="btn btn-success    mt-3 shadow p-2 col-12 col-sm-3  "
+                  onClick={handleToggleSelect}
+                >
+                  <span>{isSelected}</span>
+                  {isSelected ? "Deselect" : "Select"}
+                </button>
               </div>
             </div>
           </div>
