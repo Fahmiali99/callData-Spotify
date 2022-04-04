@@ -13,7 +13,7 @@ const Track = ({ items }) => {
     <div className="">
       <table className="">
         <thead className="">
-          <tr>
+          <tr className="text-white">
             <th className="px-2">#</th>
             <th className="w-100 ">Title</th>
             <th className=" px-5 ">Album</th>

@@ -16,7 +16,7 @@ const List = ({
   };
 
   return (
-    <tr key={id} className=" ">
+    <tr key={id} className="">
       <td className="px-2">{index}</td>
       <td className="">
         <img className="" src={image} />
@@ -27,13 +27,13 @@ const List = ({
       </td>
       <td className="truncate px-5">{album}</td>
       <td>{duration}</td>
-      <td>
+      <td className=" px-3">
         {textSelect ? (
-          <button className="" onClick={setSelect}>
+          <button className="btn btn-warning" onClick={setSelect}>
             Selected
           </button>
         ) : (
-          <button className="" onClick={setSelect}>
+          <button className="btn btn-success" onClick={setSelect}>
             Select
           </button>
         )}

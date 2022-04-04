@@ -178,7 +178,12 @@ function SearchPage() {
 
   return (
     <div>
-      <div className="">
+      <div className="text-white bg-dark pt-4 pb-3">
+        <div className="w-100 d-flex justify-content-center">
+          <div className="col-md-11 col-12">
+            {/* <p className="">Hi, Good morning {user.display_name}</p> */}
+          </div>
+        </div>
         <Navbar
           menu={
             !token ? (
@@ -194,27 +199,33 @@ function SearchPage() {
             )
           }
         />
-        <div className="pt-24 px-14">
-          <h1 className="text-white py-6">
-            Hi, Good morning {user.display_name}
-          </h1>
-          {token ? (
-            <div className="flex space-x-4">
-              <SearchBar
-                submit={searchTracks}
-                change={(e) => setSearchKey(e.target.value)}
-              />
-              {selectedTracks.length !== 0 && (
-                <CreatePlaylist
-                  title={handleFormChange}
-                  description={handleFormChange}
-                  submit={handleCreatePlaylist}
-                />
-              )}
+
+        <div className="bg-">
+          <div className="">
+            <div className="w-100 d-flex justify-content-center">
+              <div className="col-md-11 col-12">
+                {token ? (
+                  <div className="">
+                    <SearchBar
+                      submit={searchTracks}
+                      change={(e) => setSearchKey(e.target.value)}
+                    />
+                    {selectedTracks.length !== 0 && (
+                      <CreatePlaylist
+                        title={handleFormChange}
+                        description={handleFormChange}
+                        submit={handleCreatePlaylist}
+                      />
+                    )}
+                  </div>
+                ) : null}
+                <Track items={renderTracks()} />
+                {results.length === 0 && (
+                  <h6 className=" text-white text-center">No tracks</h6>
+                )}
+              </div>
             </div>
-          ) : null}
-          <Track items={renderTracks()} />
-          {results.length === 0 && <h1 className="text-center">No tracks</h1>}
+          </div>
         </div>
       </div>
     </div>
