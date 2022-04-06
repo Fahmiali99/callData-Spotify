@@ -21,7 +21,7 @@ const CreatePlaylist = ({ title, description, submit }) => {
                 </div>
                 <form onSubmit={submit}>
                   <div className="">
-                    <label className="">
+                    <label className=" d-block">
                       <span className="px-2">Title</span>
                       <input
                         type="text"
@@ -32,7 +32,7 @@ const CreatePlaylist = ({ title, description, submit }) => {
                         className="form-control  "
                       />
                     </label>
-                    <label className="px-2">
+                    <label className="px-2 d-block">
                       <span className="">Description</span>
                       <input
                         type="textarea"
@@ -43,15 +43,14 @@ const CreatePlaylist = ({ title, description, submit }) => {
                     </label>
                   </div>
                   <div className=" mt-3 d-flex">
-                    <div className="">
-                      <button
-                        className="btn btn-danger"
-                        type="button"
-                        onClick={() => setShowModal(false)}
-                      >
-                        Close
-                      </button>
-                    </div>
+                    <button
+                      className="btn btn-danger"
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Close
+                    </button>
+
                     <div className="px-2">
                       <button className="btn btn-success" type="submit">
                         Save Changes

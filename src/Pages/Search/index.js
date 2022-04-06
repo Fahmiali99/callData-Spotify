@@ -6,10 +6,15 @@ import Track from "../../Components/Track";
 import SearchBar from "../../Components/SearchBar";
 import CreatePlaylist from "../../Components/CreatePlaylist";
 import { convertTime } from "../../Utils/convertTime";
+import { setToken, removeToken } from "../../Store/auth";
+import { useSelector, useDispatch } from "react-redux";
 import {
   BASE_URL_API,
-  GET_SEARCH,
-  GET_USER_PROFILE,
+  SEARCH,
+  CURRENT_USER_PROFILE,
+  USERS,
+  PLAYLISTS,
+  TRACKS,
 } from "../../Config/urlApi";
 
 function SearchPage() {
@@ -19,7 +24,6 @@ function SearchPage() {
   const SCOPE = "playlist-modify-private";
   const RESPONSE_TYPE = "token";
 
-  const [token, setToken] = useState("");
   const [searchKey, setSearchKey] = useState("");
   const [results, setResults] = useState([]);
   const [selectedTracks, setSelectedTracks] = useState([]);
@@ -36,6 +40,9 @@ function SearchPage() {
     });
   };
 
+  const dispatch = useDispatch();
+  let { token } = useSelector((state) => state.auth);
+
   useEffect(() => {
     const hash = window.location.hash;
     let token = window.localStorage.getItem("token");
@@ -50,7 +57,7 @@ function SearchPage() {
       window.location.hash = "";
       window.localStorage.setItem("token", token);
     }
-    setToken(token);
+    dispatch(setToken(token));
 
     if (token !== null) {
       setUserProfile(token);
@@ -58,7 +65,7 @@ function SearchPage() {
   }, []);
 
   const setUserProfile = async (token) => {
-    const { data } = await axios.get(`${GET_USER_PROFILE}`, {
+    const { data } = await axios.get(`${CURRENT_USER_PROFILE}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -69,7 +76,7 @@ function SearchPage() {
   const createPlaylist = async (user_id) => {
     try {
       const response = await axios.post(
-        `${BASE_URL_API}/users/${user_id}/playlists`,
+        BASE_URL_API + USERS + `/${user_id}` + PLAYLISTS,
         {
           name: playlistForm.title,
           public: false,
@@ -93,7 +100,7 @@ function SearchPage() {
   const addSongsToPlaylist = async (playlist_id) => {
     try {
       const response = await axios.post(
-        `${BASE_URL_API}/playlists/${playlist_id}/tracks`,
+        BASE_URL_API + PLAYLISTS + `/${playlist_id}` + TRACKS,
         {
           uris: selectedTracks.map((song) => song),
         },
@@ -111,7 +118,7 @@ function SearchPage() {
 
   const searchTracks = async (e) => {
     e.preventDefault();
-    const { data } = await axios.get(`${GET_SEARCH}`, {
+    const { data } = await axios.get(`${SEARCH}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -156,7 +163,7 @@ function SearchPage() {
   };
 
   const logout = () => {
-    setToken("");
+    dispatch(removeToken());
     window.localStorage.removeItem("token");
   };
 
