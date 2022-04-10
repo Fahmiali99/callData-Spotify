@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const List = ({
   index,
@@ -19,7 +19,7 @@ const List = ({
     <tr key={id} className="">
       <td className="px-2">{index}</td>
       <td className="">
-        <img className="" src={image} />
+        <img className="" src={image} alt="" />
         <div className="">
           <h3 className="text-dark">{title}</h3>
           <p>{artists}</p>

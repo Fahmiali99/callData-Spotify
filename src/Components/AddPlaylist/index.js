@@ -13,55 +13,48 @@ const AddPlaylist = ({ title, description, submit }) => {
       </button>
       {showModal ? (
         <>
-          <div className="">
+          <div>
+            <h3 className="">Create Playlist</h3>
+          </div>
+          <form onSubmit={submit}>
             <div className="">
-              <div className="">
-                <div className="">
-                  <h3 className="">Create Playlist</h3>
-                </div>
-                <form onSubmit={submit}>
-                  <div className="">
-                    <label className=" d-block">
-                      <span className="px-2">Title</span>
-                      <input
-                        type="text"
-                        name="title"
-                        onChange={title}
-                        required={true}
-                        minLength={10}
-                        className="form-control  "
-                      />
-                    </label>
-                    <label className="px-2 d-block">
-                      <span className="">Description</span>
-                      <input
-                        type="textarea"
-                        name="description"
-                        onChange={description}
-                        className="form-control"
-                      />
-                    </label>
-                  </div>
-                  <div className=" mt-3 d-flex">
-                    <button
-                      className="btn btn-danger"
-                      type="button"
-                      onClick={() => setShowModal(false)}
-                    >
-                      Close
-                    </button>
+              <label className=" d-block">
+                <span className="px-2">Title</span>
+                <input
+                  type="text"
+                  name="title"
+                  onChange={title}
+                  required={true}
+                  minLength={10}
+                  className="form-control  "
+                />
+              </label>
+              <label className="px-2 d-block">
+                <span className="">Description</span>
+                <input
+                  type="textarea"
+                  name="description"
+                  onChange={description}
+                  className="form-control"
+                />
+              </label>
+            </div>
+            <div className=" mt-3 d-flex">
+              <button
+                className="btn btn-danger"
+                type="button"
+                onClick={() => setShowModal(false)}
+              >
+                Close
+              </button>
 
-                    <div className="px-2">
-                      <button className="btn btn-success" type="submit">
-                        Save Changes
-                      </button>
-                    </div>
-                  </div>
-                </form>
+              <div className="px-2">
+                <button className="btn btn-success" type="submit">
+                  Save Changes
+                </button>
               </div>
             </div>
-          </div>
-          <div className=""></div>
+          </form>
           <hr></hr>
         </>
       ) : null}
