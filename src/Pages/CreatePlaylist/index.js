@@ -162,7 +162,7 @@ function CreatePlaylist() {
             <div className="w-100 d-flex justify-content-center">
               <div className="col-md-11 col-12">
                 {token ? (
-                  <div className=" space-x-4">
+                  <div className="">
                     <SearchBar
                       submit={searchTracks}
                       change={(e) => setSearchKey(e.target.value)}

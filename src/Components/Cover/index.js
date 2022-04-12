@@ -4,11 +4,7 @@ const Cover = ({ title, artists, images, total_tracks }) => {
   return (
     <div>
       <div>
-        <img
-          className="max-w-[250px] drop-shadow-2xl"
-          src={images}
-          alt="Album Cover"
-        />
+        <img className="" src={images} alt="Album Cover" />
       </div>
       <div>
         <h1 className="font-bold ">PLAYLIST</h1>

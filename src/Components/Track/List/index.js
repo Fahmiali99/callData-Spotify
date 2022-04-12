@@ -16,28 +16,38 @@ const List = ({
   };
 
   return (
-    <tr key={id} className="">
-      <td className="px-2">{index}</td>
-      <td className="">
-        <img className="" src={image} alt="" />
-        <div className="">
-          <h3 className="text-dark">{title}</h3>
-          <p>{artists}</p>
+    <tr key={id}>
+      <div className="border p-3">
+        <div className="d-flex align-items-center  ">
+          <div className="h-100">
+            <img className="image-artis" src={image} alt="" />
+          </div>
+          <div className="px-3 ">
+            <div className="">
+              <div>
+                <h5 className="text-light fw-bold">{title}</h5>
+              </div>
+              <div>
+                <p>{artists}</p>
+              </div>
+              <div>
+                <p>{album}</p>
+              </div>
+              <div>
+                {textSelect ? (
+                  <button className="btnSelect" onClick={setSelect}>
+                    Selected
+                  </button>
+                ) : (
+                  <button className="btnSelect" onClick={setSelect}>
+                    Select
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-      </td>
-      <td className="truncate px-5">{album}</td>
-      <td>{duration}</td>
-      <td className=" px-3">
-        {textSelect ? (
-          <button className="btn btn-warning" onClick={setSelect}>
-            Selected
-          </button>
-        ) : (
-          <button className="btn btn-success" onClick={setSelect}>
-            Select
-          </button>
-        )}
-      </td>
+      </div>
     </tr>
   );
 };

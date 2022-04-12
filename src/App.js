@@ -18,6 +18,7 @@ function App() {
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const SCOPE = "playlist-modify-private";
   const RESPONSE_TYPE = "token";
+  const openData = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
 
   const dispatch = useDispatch();
   let { token } = useSelector((state) => state.auth);
@@ -50,13 +51,11 @@ function App() {
         <Navbar
           menu={
             !token ? (
-              <a
-                href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`}
-              >
-                <button className="btn btn-primary">Login</button>
+              <a href={openData}>
+                <button className="btn btn-primary text-light">Login</button>
               </a>
             ) : (
-              <button className="btn btn-warning" onClick={logout}>
+              <button className="btn btn-warning text-light" onClick={logout}>
                 Logout
               </button>
             )
