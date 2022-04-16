@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "react-bootstrap";
 
 const Navbar = ({ menu }) => {
   return (
@@ -9,10 +10,11 @@ const Navbar = ({ menu }) => {
             href="/"
             className="w-100 d-flex justify-content-start align-items-center text-white text-decoration-none"
           >
-            <img
+            <Image
               src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-simple-green-logo-icon-24.png"
-              className="logo-spotify"
+              style={{ width: "50px" }} // className="logo-spotify"
             />
+
             <h3 className=" fw-bold px-2">Spotify</h3>
           </a>
           {menu}

@@ -157,7 +157,7 @@ function CreatePlaylist() {
   return (
     <div>
       <div className="text-white bg-dark pt-4 pb-3">
-        <div className="bg-">
+        <div className="">
           <div className="">
             <div className="w-100 d-flex justify-content-center">
               <div className="col-md-11 col-12">

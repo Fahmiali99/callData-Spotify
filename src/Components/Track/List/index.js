@@ -35,11 +35,17 @@ const List = ({
               </div>
               <div>
                 {textSelect ? (
-                  <button className="btnSelect" onClick={setSelect}>
+                  <button
+                    className="btnSelect btn btn-warning"
+                    onClick={setSelect}
+                  >
                     Selected
                   </button>
                 ) : (
-                  <button className="btnSelect" onClick={setSelect}>
+                  <button
+                    className="btnSelect  btn btn-success"
+                    onClick={setSelect}
+                  >
                     Select
                   </button>
                 )}

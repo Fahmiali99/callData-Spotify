@@ -14,7 +14,7 @@ body {
 
 .btnSelect {
   border: none;
-  color: white;
+
   width: 150px;
   padding: 5px;
   border-radius: 20px;
@@ -22,21 +22,17 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  background-color: #28a745;
+  /* background-color: #28a745; */
 }
 
 .btnSelect:hover {
-  background-color: #50c26b;
+  /* background-color: #50c26b; */
 }
 
 .grid-column-song {
   display: grid;
   grid-template-columns: 49% 49%;
   grid-gap: 20px;
-}
-
-.logo-spotify {
-  width: 50px;
 }
 
 @media screen and (max-width: 756px) {
@@ -47,9 +43,5 @@ body {
   .grid-column-song {
     display: grid;
     grid-template-columns: auto;
-  }
-
-  .logo-spotify {
-    width: 20%;
   }
 }

@@ -11,6 +11,7 @@ import Navbar from "./Components/Navbar";
 import { useSelector, useDispatch } from "react-redux";
 import { setToken, removeToken } from "./Store/auth";
 import "./App.css";
+import { Button } from "react-bootstrap";
 
 function App() {
   const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
@@ -52,12 +53,12 @@ function App() {
           menu={
             !token ? (
               <a href={openData}>
-                <button className="btn btn-primary text-light">Login</button>
+                <Button variant="primary">Login</Button>{" "}
               </a>
             ) : (
-              <button className="btn btn-warning text-light" onClick={logout}>
+              <Button variant="warning" onClick={logout}>
                 Logout
-              </button>
+              </Button>
             )
           }
         />
