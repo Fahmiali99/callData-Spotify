@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-const Track = ({ items }) => {
+const Track = ({ items }: any) => {
   return (
     <Container fluid>
       <Row>

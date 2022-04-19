@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cover = ({ title, artists, images, total_tracks }) => {
+const Cover = ({ title, artists, images, total_tracks }: any) => {
   return (
     <div>
       <div>

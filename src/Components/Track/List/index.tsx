@@ -10,7 +10,7 @@ const List = ({
   image,
   buttonSelect,
   textSelect,
-}) => {
+}: any) => {
   const setSelect = () => {
     buttonSelect();
   };

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import List from "../../Components/Track/List";
+import List from "../../Components/Track/List/index";
 import Track from "../../Components/Track";
 import SearchBar from "../../Components/SearchBar";
 import AddPlaylist from "../../Components/AddPlaylist";
@@ -25,7 +25,7 @@ function CreatePlaylist() {
     description: "",
   });
 
-  const handleFormChange = (e) => {
+  const handleFormChange = (e: any) => {
     setPlaylistForm({
       ...playlistForm,
       [e.target.name]: e.target.value,
@@ -40,7 +40,7 @@ function CreatePlaylist() {
     }
   }, []);
 
-  const setUserProfile = async (token) => {
+  const setUserProfile = async (token: any) => {
     const { data } = await axios.get(CURRENT_USER_PROFILE, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ function CreatePlaylist() {
     setUser(data);
   };
 
-  const createPlaylist = async (user_id) => {
+  const createPlaylist = async (user_id: any) => {
     try {
       const response = await axios.post(
         BASE_URL_API + USERS + `/${user_id}` + PLAYLISTS,
@@ -73,7 +73,7 @@ function CreatePlaylist() {
     }
   };
 
-  const addSongsToPlaylist = async (playlist_id) => {
+  const addSongsToPlaylist = async (playlist_id: any) => {
     try {
       const response = await axios.post(
         BASE_URL_API + PLAYLISTS + `/${playlist_id}` + TRACKS,
@@ -92,7 +92,7 @@ function CreatePlaylist() {
     }
   };
 
-  const searchTracks = async (e) => {
+  const searchTracks = async (e: any) => {
     e.preventDefault();
     const { data } = await axios.get(SEARCH, {
       headers: {
@@ -106,10 +106,10 @@ function CreatePlaylist() {
     setResults(data.tracks.items);
   };
 
-  const handleCreatePlaylist = async (e) => {
+  const handleCreatePlaylist = async (e: any) => {
     e.preventDefault();
     try {
-      const id = user.id;
+      const id = user;
       const playlistId = await createPlaylist(id);
       if (playlistId) {
         const response = await addSongsToPlaylist(playlistId);

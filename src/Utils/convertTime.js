@@ -1,7 +1,7 @@
-export const convertTime = (time) => {
+export const convertTime = (time: any) => {
   const minutes = Math.floor(time / 60000);
   const seconds = ((time % 60000) / 1000).toFixed(0);
-  return seconds === 60
+  return seconds === "60"
     ? minutes + 1 + ":00"
-    : minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    : minutes + ":" + '(seconds ? 10 ? "0" : "")' + seconds;
 };

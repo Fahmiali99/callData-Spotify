@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 
-const Navbar = ({ menu }) => {
+const Navbar = ({ menu }: any) => {
   return (
     <div className=" d-flex justify-content-center">
       <div className="col-md-11 col-12">

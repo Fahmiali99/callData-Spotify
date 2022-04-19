@@ -1,7 +1,13 @@
 import React from "react";
 import { InputGroup, FormControl, Form, Button, Col } from "react-bootstrap";
 
-const AddPlaylist = ({ title, description, submit }) => {
+type Props = {
+  submit: (e: React.FormEvent<HTMLFormElement>) => void;
+  title: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  description: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const AddPlaylist = ({ title, description, submit }: Props) => {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>

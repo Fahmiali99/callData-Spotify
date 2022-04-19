@@ -1,6 +1,11 @@
 import React from "react";
 
-const SearchBar = ({ submit, change }) => {
+type Props = {
+  submit: (e: React.FormEvent<HTMLFormElement>) => void;
+  change: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const SearchBar = ({ submit, change }: Props) => {
   return (
     <form onSubmit={submit}>
       <div className=" mb-4 w-100 p-2">
