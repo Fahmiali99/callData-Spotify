@@ -5,7 +5,9 @@
 
 body {
   /* background: #9198e5; */
+  /* height: 100vh; */
   font-family: "Mulish", sans-serif;
+  /* background-color: #192028; */
 }
 
 .image-artis {
@@ -29,6 +31,15 @@ body {
   display: grid;
   grid-template-columns: 49% 49%;
   grid-gap: 20px;
+}
+
+.landing-page {
+  width: 100%;
+  height: 70vh;
+}
+
+.color-song {
+  background-color: #192028;
 }
 
 @media screen and (max-width: 756px) {

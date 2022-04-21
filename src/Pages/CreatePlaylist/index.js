@@ -14,6 +14,7 @@ import {
   PLAYLISTS,
   TRACKS,
 } from "../../Config/urlApi";
+import LandingPage from "../LandingPage";
 
 function CreatePlaylist() {
   const [searchKey, setSearchKey] = useState("");
@@ -25,7 +26,7 @@ function CreatePlaylist() {
     description: "",
   });
 
-  const handleFormChange = (e: any) => {
+  const handleFormChange = (e) => {
     setPlaylistForm({
       ...playlistForm,
       [e.target.name]: e.target.value,
@@ -40,7 +41,7 @@ function CreatePlaylist() {
     }
   }, []);
 
-  const setUserProfile = async (token: any) => {
+  const setUserProfile = async (token) => {
     const { data } = await axios.get(CURRENT_USER_PROFILE, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -49,7 +50,7 @@ function CreatePlaylist() {
     setUser(data);
   };
 
-  const createPlaylist = async (user_id: any) => {
+  const createPlaylist = async (user_id) => {
     try {
       const response = await axios.post(
         BASE_URL_API + USERS + `/${user_id}` + PLAYLISTS,
@@ -73,7 +74,7 @@ function CreatePlaylist() {
     }
   };
 
-  const addSongsToPlaylist = async (playlist_id: any) => {
+  const addSongsToPlaylist = async (playlist_id) => {
     try {
       const response = await axios.post(
         BASE_URL_API + PLAYLISTS + `/${playlist_id}` + TRACKS,
@@ -92,7 +93,7 @@ function CreatePlaylist() {
     }
   };
 
-  const searchTracks = async (e: any) => {
+  const searchTracks = async (e) => {
     e.preventDefault();
     const { data } = await axios.get(SEARCH, {
       headers: {
@@ -106,10 +107,10 @@ function CreatePlaylist() {
     setResults(data.tracks.items);
   };
 
-  const handleCreatePlaylist = async (e: any) => {
+  const handleCreatePlaylist = async (e) => {
     e.preventDefault();
     try {
-      const id = user;
+      const id = user.id;
       const playlistId = await createPlaylist(id);
       if (playlistId) {
         const response = await addSongsToPlaylist(playlistId);
@@ -178,7 +179,8 @@ function CreatePlaylist() {
                 ) : null}
                 <Track items={renderTracks()} />
                 {results.length === 0 && (
-                  <h3 className="text-white text-center">No tracks</h3>
+                  // <h3 className="text-white text-center">No tracks</h3>
+                  <LandingPage />
                 )}
               </div>
             </div>

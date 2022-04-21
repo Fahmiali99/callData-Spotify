@@ -12,6 +12,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setToken, removeToken } from "./Store/auth";
 import "./App.css";
 import { Button } from "react-bootstrap";
+import Footer from "./Components/Footer";
 
 function App() {
   const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
@@ -79,6 +80,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer />
     </Router>
   );
 }

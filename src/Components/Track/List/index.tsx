@@ -1,12 +1,10 @@
 import React from "react";
 
 const List = ({
-  index,
   id,
   title,
   artists,
   album,
-  duration,
   image,
   buttonSelect,
   textSelect,
@@ -17,7 +15,7 @@ const List = ({
 
   return (
     <tr key={id}>
-      <div className="border p-3">
+      <div className="border p-3 color-song rounded-3">
         <div className="d-flex align-items-center  ">
           <div className="h-100">
             <img className="image-artis" src={image} alt="" />
