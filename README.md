@@ -17,4 +17,8 @@ Fal Music is app to the add playlist music to make easy for search about the mus
 
 
 ### Features
-:arrow_right:
+:arrow_right: Login Spotify Account
+:arrow_right: Search Song
+:arrow_right: Select For Favorite Song
+:arrow_right: Add Playlist Favorite Song
+:arrow_right: Logout Account
