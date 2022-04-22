@@ -25,4 +25,21 @@ Fal Music is app to the add playlist music to make easy for search about the mus
 
 ### 
 
-**- `npm start`**
+
+## Dev
+**Requirements:** `node` 6.0.0 or higher, `npm` 3.8.6 or higher
+- `npm start`, runs storybook
+
+## Tests
+- `npm start`
+- in a different terminal, `npm t` runs all the tests
+
+### To run 1 test file, prepend `-- -t tests/theTestFileName.js`
+```
+npm t -- -t tests/SimplHTML.js
+```
+
+### To run 1 testcase, prepend `--testcase "name of testcase"`
+```
+npm t -- -t tests/SimplHTML.js --testcase "Simple HTML"
+```
