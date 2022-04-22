@@ -2,7 +2,7 @@
 
 Fal Music is app to the add playlist music to make easy for search about the music at Spotify application.
 
-## Display!
+## Display
 ![1](https://user-images.githubusercontent.com/79827631/164679954-ba684f61-cee4-495b-ae93-53f99c2696d7.PNG)
 
 ![2a](https://user-images.githubusercontent.com/79827631/164680123-979bd1c6-aa20-42ee-a6fa-602a9397a504.PNG)
