@@ -22,3 +22,7 @@ Fal Music is app to the add playlist music to make easy for search about the mus
 * :arrow_right: Select For Favorite Song
 * :arrow_right: Add Playlist Favorite Song
 * :arrow_right: Logout Account
+
+### 
+
+- `npm start`
