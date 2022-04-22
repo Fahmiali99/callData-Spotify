@@ -36,6 +36,8 @@ cd callData-Spotify
 ```
 * Set up Spotify ID
 `KEY_API_ID` at .env file
+
+
 * Start the server
 ```
 npm start
