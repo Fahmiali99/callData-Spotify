@@ -35,11 +35,12 @@ https://github.com/Fahmiali99/callData-Spotify.git
 cd callData-Spotify
 ```
 * Set up Spotify ID
-:`KEY_API_ID` at .env file
+``KEY_API_ID`` at .env file
 * Start the server
 ```
 npm start
 ```
+
 
 
 
