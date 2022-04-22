@@ -5,7 +5,7 @@ const Track = ({ items }: any) => {
   return (
     <Container fluid>
       <Row>
-        <Col className="d-flex align-items-center w-100 h-100 d-flex align-items-center justify-content-center">
+        <Col className="align-items-center w-100 h-100 d-flex align-items-center justify-content-center">
           <Col className="grid-column-song  ">{items}</Col>
         </Col>
       </Row>

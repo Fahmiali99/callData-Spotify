@@ -4,6 +4,7 @@ const List = ({
   id,
   title,
   artists,
+  duration,
   album,
   image,
   buttonSelect,
@@ -30,6 +31,9 @@ const List = ({
               </div>
               <div>
                 <p>{album}</p>
+              </div>
+              <div>
+                <p>{duration}</p>
               </div>
               <div>
                 {textSelect ? (
