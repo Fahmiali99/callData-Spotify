@@ -30,15 +30,18 @@ Fal Music is app to the add playlist music to make easy for search about the mus
 ```
 https://github.com/Fahmiali99/callData-Spotify.git
 ```
-
 * Go To Directory
 ```
 cd callData-Spotify
 ```
+* Set up Spotify ID
+- `KEY_API_ID` at .env file
 * Start the server
 ```
 npm start
 ```
+
+
 
 
 
