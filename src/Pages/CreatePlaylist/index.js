@@ -39,7 +39,7 @@ function CreatePlaylist() {
     if (token !== null) {
       setUserProfile(token);
     }
-  }, []);
+  }, [token]);
 
   const setUserProfile = async (token) => {
     const { data } = await axios.get(CURRENT_USER_PROFILE, {

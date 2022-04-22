@@ -40,7 +40,7 @@ function App() {
       window.localStorage.setItem("token", token);
     }
     dispatch(setToken(token));
-  }, []);
+  }, [dispatch]);
 
   const logout = () => {
     dispatch(removeToken());
