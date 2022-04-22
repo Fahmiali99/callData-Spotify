@@ -23,23 +23,23 @@ Fal Music is app to the add playlist music to make easy for search about the mus
 * :arrow_right: Add Playlist Favorite Song
 * :arrow_right: Logout Account
 
-### 
 
+### Installation
 
-## Dev
-**Requirements:** `node` 6.0.0 or higher, `npm` 3.8.6 or higher
-- `npm start`, runs storybook
-
-## Tests
-- `npm start`
-- in a different terminal, `npm t` runs all the tests
-
-### To run 1 test file, prepend `-- -t tests/theTestFileName.js`
+* Clone Project
 ```
-npm t -- -t tests/SimplHTML.js
+https://github.com/Fahmiali99/callData-Spotify.git
 ```
 
-### To run 1 testcase, prepend `--testcase "name of testcase"`
+* Go To Directory
 ```
-npm t -- -t tests/SimplHTML.js --testcase "Simple HTML"
+cd callData-Spotify
 ```
+* Start the server
+```
+npm start
+```
+
+
+
+
