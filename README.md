@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# FAL Music
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fal Music is app to the add playlist music to make easy for search about the music at Spotify application.
 
-## Available Scripts
+## Display!
+![1](https://user-images.githubusercontent.com/79827631/164679954-ba684f61-cee4-495b-ae93-53f99c2696d7.PNG)
 
-In the project directory, you can run:
+![2a](https://user-images.githubusercontent.com/79827631/164680123-979bd1c6-aa20-42ee-a6fa-602a9397a504.PNG)
 
-### `npm start`
+![3b](https://user-images.githubusercontent.com/79827631/164680217-45cbb1c5-f115-4433-8595-323a3f24d621.PNG)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![4c](https://user-images.githubusercontent.com/79827631/164680302-3cfaeb72-e4b4-4b20-8ac0-76950826f395.PNG)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![5d](https://user-images.githubusercontent.com/79827631/164680350-2b0307f5-0d58-4139-89ab-3dc6da559fc0.PNG)
 
-### `npm test`
+![6e](https://user-images.githubusercontent.com/79827631/164680789-bebdcbc3-6c82-41a7-bc61-d97e5e878309.PNG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Features
+* :arrow_right: Login Spotify Account
+* :arrow_right: Search Song
+* :arrow_right: Select For Favorite Song
+* :arrow_right: Add Playlist Favorite Song
+* :arrow_right: Logout Account
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Clone Project
+```
+https://github.com/Fahmiali99/callData-Spotify.git
+```
+* Go To Directory
+```
+cd callData-Spotify
+```
+* Set up Spotify ID
+ : `KEY_API_ID` at .env file
+* Start the server
+```
+npm start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
