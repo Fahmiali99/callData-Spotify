@@ -16,7 +16,7 @@ import Footer from "./Components/Footer";
 
 function App() {
   const CLIENT_ID = "ef0d7879ebe44432b2e88c347b56c2bb";
-  const REDIRECT_URI = "https://fal-music.vercel.app/";
+  const REDIRECT_URI = "https://musici.vercel.app/";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const SCOPE = "playlist-modify-private";
   const RESPONSE_TYPE = "token";
