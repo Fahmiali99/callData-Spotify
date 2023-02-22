@@ -15,7 +15,7 @@ import { Button } from "react-bootstrap";
 import Footer from "./Components/Footer";
 
 function App() {
-  const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+  const CLIENT_ID = "ef0d7879ebe44432b2e88c347b56c2bb";
   const REDIRECT_URI = "https://fal-music.vercel.app/";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const SCOPE = "playlist-modify-private";
