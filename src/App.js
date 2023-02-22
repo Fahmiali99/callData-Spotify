@@ -18,7 +18,15 @@ function App() {
   const CLIENT_ID = "ef0d7879ebe44432b2e88c347b56c2bb";
   const REDIRECT_URI = "https://musici.vercel.app/";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
-  const SCOPE = "playlist-modify-private";
+  const SCOPE = [
+      "user-read-private",
+      "user-read-email",
+      "user-modify-playback-state",
+      "user-read-playback-state",
+      "user-read-currently-playing",
+      "user-read-recently-played",
+      "user-top-read",
+    ];
   const RESPONSE_TYPE = "token";
   const openData = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
 
